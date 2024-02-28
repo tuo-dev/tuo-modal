@@ -1,0 +1,1 @@
+export {default as TuoFadeModal} from './components/TuoFadeModal';
