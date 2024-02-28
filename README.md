@@ -1,6 +1,6 @@
 # tuo-modal
 
-modal with fullpage background
+modal with fullpage background (react)
 
 ## Screenshot
 
