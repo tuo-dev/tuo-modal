@@ -44,9 +44,10 @@ const [open, setOpen] = useState<boolean>(false);
 | className | additional css class modal without background | stiring | |
 | width | width of modal | number | 300 |
 | height | height of modal | number | 400 |
-| modalColor | background color of modal | string | '#fff' |
+| modalColor | background-color of modal | string | '#fff' |
 | modalRadius | border-radius of modal  | number | 10 |
 | modalPadding | padding of modal | number | 10 |
+| backgroundColor | background-color of background | string | '#0003' |
 | clickBackgroundClose | onclose when clicked background | boolean | true |
 | closeBtn | close button | boolean | true |
 | open | open modal | boolean | |

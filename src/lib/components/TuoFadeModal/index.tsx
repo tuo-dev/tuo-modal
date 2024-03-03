@@ -10,6 +10,7 @@ interface ITuoFadeModal {
   modalColor?: string;
   modalRadius?: number;
   modalPadding?: number;
+  backgroundColor?: string;
   clickBackgroundClose?: boolean;
   closeBtn? : boolean;
   open:boolean;
@@ -23,6 +24,7 @@ const TuoFadeModal = ({
   modalColor = '#fff',
   modalRadius = 10,
   modalPadding = 10,
+  backgroundColor = '#0003',
   clickBackgroundClose = true,
   closeBtn = true,
   open,
@@ -85,6 +87,7 @@ const TuoFadeModal = ({
         <div
           ref={backgroundRef}
           className={`tuo-fade-modal-background ${modalClass} use-animation`}
+          style={{background: backgroundColor}}
           onClick={() => { if (clickBackgroundClose && modalClass === 'stop' && onClose) onClose();}} />
       </div>
       }
