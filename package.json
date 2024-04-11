@@ -1,6 +1,6 @@
 {
   "name": "tuo-modal",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "type": "module",
   "main": "dist/index.umd.cjs",
   "module": "dist/index.js",
@@ -24,7 +24,7 @@
   "license": "MIT",
   "author": {
     "name": "toudev",
-    "email": "ym3582@naver.com"
+    "email": "thinkupout@naver.com"
   },
   "repository": {
     "type": "git",
