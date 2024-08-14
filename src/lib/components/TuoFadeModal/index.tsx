@@ -16,6 +16,7 @@ interface ITuoFadeModal {
   closeBtnColor?: string;
   open:boolean;
   onClose: () => void;
+  closeAnimationEnd?: () => void;
 }
 
 const TuoFadeModal = ({
@@ -31,6 +32,7 @@ const TuoFadeModal = ({
   closeBtnColor = '#333',
   open,
   onClose,
+  closeAnimationEnd,
   children
 }:PropsWithChildren<ITuoFadeModal>) => {
   
@@ -39,8 +41,10 @@ const TuoFadeModal = ({
 
   const handleModalClass = () => {
     if (modalClass === 'open') setModalClass('stop');
-    else if (modalClass === 'close') setModalClass('');
-    else return;
+    else if (modalClass === 'close') {
+      if (closeAnimationEnd) closeAnimationEnd();
+      setModalClass('');
+    } else return;
   };
 
   useEffect(() => {

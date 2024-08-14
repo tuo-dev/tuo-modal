@@ -2,11 +2,12 @@ import React, { useState } from 'react'
 import TuoFadeModal from './lib/components/TuoFadeModal'
 
 const Test = () => {
-  const [open , setOpen] = useState<boolean>(false);
+  const [open , setOpen] = useState<'test' | 'apple' | 'close'>('close');
   return (
     <div>
-      <button onClick={() => setOpen(true)}>test</button>
-      <TuoFadeModal open={open} onClose={()=> setOpen(false)}>CONTENT</TuoFadeModal>
+      <button onClick={() => setOpen('test')}>test</button>
+      <button onClick={() => setOpen('apple')}>apple</button>
+      <TuoFadeModal open={open !== 'close'} onClose={()=> setOpen('close')} closeAnimationEnd={() => console.log('end!')}>{open}</TuoFadeModal>
     </div>
   )
 }

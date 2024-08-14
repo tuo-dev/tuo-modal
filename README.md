@@ -53,3 +53,4 @@ const [open, setOpen] = useState<boolean>(false);
 | closeBtnColor | color of close button | string | '#333' |
 | open | open modal | boolean | |
 | onClose | close function of modal | () => void | |
+| closeAnimationEnd | function after close animation is complete | () => void | |
